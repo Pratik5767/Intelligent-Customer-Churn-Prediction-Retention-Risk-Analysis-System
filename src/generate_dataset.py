@@ -244,7 +244,7 @@ df = pd.concat([df, exact, conflict], ignore_index=True)
 df = df.sample(frac=1, random_state=7).reset_index(drop=True)
 
 # %%
-df.to_csv("data/customer_churn_dataset.csv", index=False)
+df.to_csv("data/raw/customer_churn_dataset.csv", index=False)
 print(df.shape)
 
 # %%
@@ -261,8 +261,3 @@ print(df['Customer_ID'].duplicated(keep=False).sum())
 
 # %%
 df.head()
-
-# %%
-
-
-
